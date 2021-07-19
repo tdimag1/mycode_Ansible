@@ -1,4 +1,4 @@
-# mycode (Project Title)
+# mycode
 
 Ansible training code.
 
