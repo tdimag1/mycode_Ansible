@@ -1,0 +1,21 @@
+---
+- name: Intro to T and F conditionals
+  hosts: localhost    # connect to ourselves (popular choice for HTTP operations)
+  connection: local   # there is a connection plugin called, local.py for localhost connections
+  gather_facts: no    # do not run the module "setup.py" against ourselves
+
+  vars:
+    bool_var: True  # This will cause "
+    msg_var: "TIME TO PANIC!"
+
+  tasks:
+  - name:  Runs when bool_var is true
+    debug:
+      msg: "{{ msg_var }}"
+    when: bool_var|bool
+
+  - name: runs when bool_var is false
+    debug:
+      msg: "DON'T PANIC!"
+    when: not bool_var|bool
+
