@@ -1,0 +1,16 @@
+---
+- name: Using a role
+  gather_facts: yes
+
+  roles:
+    - juniper.junos   # critical to use any code in juniper.junos/library/
+
+  tasks:
+    - name: run the juniper_junos_facts.py from juniper.junos/library/
+      juniper_junos_facts:   # this module is available in the juniper.junos/library/
+      register: results
+
+    - name: display results
+      debug:
+        var: results
+
