@@ -1,2 +1,5 @@
-28. 29.(maybe) 33.
-45 - Ansible collections with challenge
+28. Output logging 
+29. register and when(maybe did it already) 
+33. Ansible plugin system
+45. Ansible collections with challenge
+47. Ansible Module - script (challenges)
